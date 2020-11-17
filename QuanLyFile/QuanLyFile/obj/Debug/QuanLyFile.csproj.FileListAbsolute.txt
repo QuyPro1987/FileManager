@@ -1,0 +1,9 @@
+E:\Project\QuanLyFile\QuanLyFile\bin\Debug\QuanLyFile.exe.config
+E:\Project\QuanLyFile\QuanLyFile\obj\Debug\QuanLyFile.csprojResolveAssemblyReference.cache
+E:\Project\QuanLyFile\QuanLyFile\obj\Debug\QuanLyFile.FileManager.resources
+E:\Project\QuanLyFile\QuanLyFile\obj\Debug\QuanLyFile.Properties.Resources.resources
+E:\Project\QuanLyFile\QuanLyFile\obj\Debug\QuanLyFile.csproj.GenerateResource.Cache
+E:\Project\QuanLyFile\QuanLyFile\bin\Debug\QuanLyFile.exe
+E:\Project\QuanLyFile\QuanLyFile\bin\Debug\QuanLyFile.pdb
+E:\Project\QuanLyFile\QuanLyFile\obj\Debug\QuanLyFile.exe
+E:\Project\QuanLyFile\QuanLyFile\obj\Debug\QuanLyFile.pdb
