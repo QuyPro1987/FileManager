@@ -59,5 +59,15 @@ namespace QuanLyFile.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ho_so_quan_ly {
+            get {
+                object obj = ResourceManager.GetObject("ho so quan ly", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

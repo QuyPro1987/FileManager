@@ -28,22 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fileManager));
             this.tabChucNang = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btQuanLyHoSo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.treeFolder = new System.Windows.Forms.TreeView();
+            this.imgFolder = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Locker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Executer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imgHSQL = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.tabChucNang.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,7 +72,7 @@
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btQuanLyHoSo);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -92,14 +98,16 @@
             this.button2.Text = "Hồ sơ đã tải";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btQuanLyHoSo
             // 
-            this.button1.Location = new System.Drawing.Point(7, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Hồ sơ quản lý";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btQuanLyHoSo.Image = global::QuanLyFile.Properties.Resources.ho_so_quan_ly;
+            this.btQuanLyHoSo.Location = new System.Drawing.Point(7, 6);
+            this.btQuanLyHoSo.Name = "btQuanLyHoSo";
+            this.btQuanLyHoSo.Size = new System.Drawing.Size(52, 34);
+            this.btQuanLyHoSo.TabIndex = 0;
+            this.btQuanLyHoSo.Text = "Hồ Sơ Quản Lý";
+            this.btQuanLyHoSo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btQuanLyHoSo.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -140,10 +148,20 @@
             // 
             // treeFolder
             // 
+            this.treeFolder.ImageIndex = 0;
+            this.treeFolder.ImageList = this.imgFolder;
             this.treeFolder.Location = new System.Drawing.Point(4, 50);
             this.treeFolder.Name = "treeFolder";
+            this.treeFolder.SelectedImageIndex = 0;
             this.treeFolder.Size = new System.Drawing.Size(333, 377);
             this.treeFolder.TabIndex = 0;
+            this.treeFolder.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeFolder_BeforeExpand);
+            // 
+            // imgFolder
+            // 
+            this.imgFolder.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgFolder.ImageStream")));
+            this.imgFolder.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgFolder.Images.SetKeyName(0, "Folder-icon.png");
             // 
             // panel2
             // 
@@ -191,6 +209,24 @@
             this.Column1.Name = "Column1";
             this.Column1.Width = 200;
             // 
+            // imgHSQL
+            // 
+            this.imgHSQL.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgHSQL.ImageStream")));
+            this.imgHSQL.TransparentColor = System.Drawing.Color.White;
+            this.imgHSQL.Images.SetKeyName(0, "ho so quan ly.png");
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // fileManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +254,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btQuanLyHoSo;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TreeView treeFolder;
@@ -230,6 +266,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ImageList imgFolder;
+        private System.Windows.Forms.ImageList imgHSQL;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }
 
